@@ -2,305 +2,126 @@
 <html lang="id">
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#faf6ed" />
 <title>Buku Saku — Monev Prasarana Strategis Sulsel 2026</title>
-<meta name="description" content="Buku saku kunjungan lapangan Monev Prasarana Strategis Sulawesi Selatan, 11–13 Mei 2026." />
+<meta name="description" content="Buku saku peserta kunjungan lapangan Monev Prasarana Strategis Sulawesi Selatan, 11–13 Mei 2026." />
+
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<header class="hero">
-  <div class="wrap">
-    <p class="eyebrow">Buku Saku Peserta</p>
-    <h1>Monev Prasarana<br/>Strategis Sulsel 2026</h1>
-    <p class="subhead">Kunjungan Lapangan Bappenas · 11 – 13 Mei 2026 · Kota Makassar, Kab. Maros, Kab. Takalar</p>
-    <div class="stats">
-      <div class="stat"><span class="n">3</span><span class="l">Hari</span></div>
-      <div class="stat"><span class="n">3</span><span class="l">Kab/Kota</span></div>
-      <div class="stat"><span class="n">6</span><span class="l">Lokasi</span></div>
-      <div class="stat"><span class="n">4</span><span class="l">Program</span></div>
+<div class="app" id="app">
+
+  <!-- ============== BERANDA ============== -->
+  <section class="screen active" id="screen-beranda">
+    <div class="hero">
+      <div class="hero-top">
+        <span class="eyebrow">Buku Saku · Bappenas</span>
+        <button class="theme-btn" id="theme-toggle" aria-label="Ganti tema"></button>
+      </div>
+      <div class="hero-body">
+        <h1 class="hero-title"><span class="serif-italic">Monev</span> Prasarana<br/>Strategis Sulsel<br/><span class="acc-gold">2026</span></h1>
+        <p class="hero-sub" id="hero-sub"></p>
+      </div>
+      <div class="hero-stripe" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+      </div>
     </div>
-  </div>
-</header>
 
-<nav class="tabs" id="tabs" aria-label="Navigasi utama">
-  <div class="wrap tabs-inner">
-    <button class="tab active" data-tab="agenda">Agenda &amp; Lokasi</button>
-    <button class="tab" data-tab="profil">Profil Ditjen</button>
-    <button class="tab" data-tab="infra">Infrastruktur</button>
-    <button class="tab" data-tab="kontak">Kontak PIC</button>
-  </div>
-</nav>
+    <div class="stat-row" id="stat-row"></div>
 
-<main class="wrap">
-
-<!-- ============== TAB 1: AGENDA & LOKASI ============== -->
-<section class="tab-panel active" id="panel-agenda">
-
-  <h2>Rundown Acara</h2>
-  <p class="muted">Waktu lokal WITA. Sumber: rundown resmi panitia (10 Mei 2026).</p>
-
-  <div class="table-wrap">
-    <table class="rundown">
-      <thead>
-        <tr><th>Hari</th><th>Waktu</th><th>Agenda</th><th>Tempat</th></tr>
-      </thead>
-      <tbody>
-        <tr class="day-row"><td colspan="4">Hari ke-1 — Senin, 11 Mei 2026</td></tr>
-        <tr><td rowspan="9">Senin<br/>11 Mei 2026</td><td>06.30 – 09.30</td><td>Perjalanan menuju Kota Makassar</td><td>Dari Jakarta</td></tr>
-        <tr><td>09.30 – 10.00</td><td>Perjalanan menuju lokasi pembangunan Sekolah Rakyat Tahap 2 &amp; Stadion Sudiang</td><td>Jl. Pajjaiang No. 73, Sudiang Raya, Kec. Biringkanaya, Kota Makassar</td></tr>
-        <tr><td>10.00 – 12.30</td><td>Kunjungan lokasi pembangunan Sekolah Rakyat Tahap 2 &amp; Stadion Sudiang</td><td>Kota Makassar</td></tr>
-        <tr><td>12.30 – 13.30</td><td>ISHOMA</td><td>—</td></tr>
-        <tr><td>13.30 – 14.30</td><td>Perjalanan menuju lokasi Revitalisasi Madrasah TA 2025, Kab. Maros</td><td>MTsS Darul Muttaqin, Jl. Garuda Maccopa, Maccini Baji, Kec. Lau, Kab. Maros</td></tr>
-        <tr><td>14.30 – 16.00</td><td>Kunjungan lokasi Revitalisasi Madrasah TA 2025, Kab. Maros</td><td>Kab. Maros</td></tr>
-        <tr><td>16.00 – 17.00</td><td>Perjalanan menuju Hotel</td><td>—</td></tr>
-        <tr><td>17.00</td><td>Check in Hotel</td><td>—</td></tr>
-
-        <tr class="day-row"><td colspan="4">Hari ke-2 — Selasa, 12 Mei 2026</td></tr>
-        <tr><td rowspan="7">Selasa<br/>12 Mei 2026</td><td>08.00 – 10.00</td><td>Perjalanan menuju lokasi pembangunan Sekolah Rakyat Tahap 2, Kab. Takalar</td><td>Desa Pa'rappunganta, Kec. Polombangkeng Utara, Kab. Takalar</td></tr>
-        <tr><td>10.00 – 12.00</td><td>Kunjungan lokasi pembangunan Sekolah Rakyat Tahap 2, Kab. Takalar</td><td>Kab. Takalar</td></tr>
-        <tr><td>12.00 – 13.00</td><td>ISHOMA</td><td>—</td></tr>
-        <tr><td>13.00 – 14.00</td><td>Perjalanan menuju lokasi Satuan Pelayanan Pemenuhan Gizi (SPPG), Kab. Takalar</td><td>Kel. Bajeng, Kec. Pattalassang, Kab. Takalar</td></tr>
-        <tr><td>14.00 – 15.30</td><td>Kunjungan lokasi SPPG, Kab. Takalar</td><td>Kab. Takalar</td></tr>
-        <tr><td>15.30 – 17.30</td><td>Perjalanan menuju Hotel</td><td>—</td></tr>
-        <tr><td>17.30</td><td>Istirahat</td><td>—</td></tr>
-
-        <tr class="day-row"><td colspan="4">Hari ke-3 — Rabu, 13 Mei 2026</td></tr>
-        <tr><td rowspan="3">Rabu<br/>13 Mei 2026</td><td>08.30 – 09.00</td><td>Perjalanan menuju lokasi Revitalisasi Madrasah TA 2025, Kota Makassar</td><td>MIS Ulul Albab &amp; MAS Ulul Albab, Jl. Dg. Ramang, Sudiang Raya, Kec. Biringkanaya, Kota Makassar</td></tr>
-        <tr><td>09.00 – 10.30</td><td>Kunjungan lokasi Revitalisasi Madrasah TA 2025, Kota Makassar</td><td>Kota Makassar</td></tr>
-        <tr><td>10.30 – Selesai</td><td>Perjalanan kembali ke Jakarta</td><td>Menuju Jakarta</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h2 style="margin-top:2.5rem">Peta Lokasi Kunjungan</h2>
-  <p class="muted">Pin diurutkan sesuai agenda. Klik pin untuk membuka di Google Maps.</p>
-  <div id="map" class="map"></div>
-
-  <h2 style="margin-top:2.5rem">Daftar Lokasi (urut sesuai agenda)</h2>
-  <div class="cards" id="loc-cards"></div>
-
-</section>
-
-<!-- ============== TAB 2: PROFIL DITJEN ============== -->
-<section class="tab-panel" id="panel-profil">
-
-  <h2>Direktorat Jenderal Prasarana Strategis</h2>
-  <p>Direktorat Jenderal Prasarana Strategis (Ditjen PS) adalah unit kerja baru di Kementerian Pekerjaan Umum yang dibentuk untuk menyelenggarakan perumusan dan pelaksanaan kebijakan di bidang prasarana strategis dukungan <strong>perekonomian, pendidikan, peribadatan, olahraga, sosial-budaya, dan kesehatan</strong>.</p>
-
-  <h3>Tugas</h3>
-  <p>Menyelenggarakan perumusan dan pelaksanaan kebijakan di bidang prasarana strategis dukungan perekonomian, pendidikan, peribadatan, olahraga, sosial-budaya, dan kesehatan sesuai dengan ketentuan peraturan perundang-undangan.</p>
-
-  <h3>Fungsi</h3>
-  <ul>
-    <li>Perumusan kebijakan di bidang pembinaan, pengembangan, dan pengendalian sarana prasarana strategis;</li>
-    <li>Pelaksanaan kebijakan di bidang pembinaan, pengembangan, dan pengendalian sarana prasarana strategis;</li>
-    <li>Fasilitasi pengembangan jejaring kemitraan pengembangan sarana prasarana strategis;</li>
-    <li>Penyusunan norma, standar, prosedur, dan kriteria di bidang pengembangan sarana prasarana strategis.</li>
-  </ul>
-
-  <p class="muted">Sumber: <a href="https://djps.pu.go.id/" target="_blank" rel="noopener">djps.pu.go.id</a> · <a href="https://pu.go.id/struktur-organisasi/direktorat-jenderal-prasarana-strategis" target="_blank" rel="noopener">pu.go.id</a></p>
-
-  <h2 style="margin-top:2.5rem">Prioritas Presiden yang Diamanatkan</h2>
-  <p class="muted">Tiga program prioritas yang menjadi fokus pembangunan Ditjen Prasarana Strategis.</p>
-
-  <div class="cards">
-
-    <article class="card program-card acc-sr">
-      <span class="chip chip-sr">Sekolah Rakyat</span>
-      <h3>Sekolah Rakyat (SR)</h3>
-      <p>Program prioritas Presiden Prabowo Subianto untuk menyediakan <strong>pendidikan gratis dan berkualitas</strong> bagi anak-anak dari keluarga miskin dan miskin ekstrem—sebagai upaya memutus mata rantai kemiskinan.</p>
-      <ul>
-        <li><strong>Target:</strong> 100 SR per tahun, kapasitas 75–150 siswa per sekolah.</li>
-        <li><strong>Capaian Tahap I:</strong> 165 SR (Tahap IA: 63 lokasi · IB: 37 lokasi · IC: 65 lokasi).</li>
-        <li><strong>Peran PU:</strong> renovasi ringan–sedang ruang kelas, asrama, laboratorium, ruang administrasi, instalasi listrik &amp; air, pengadaan meubelair; pembangunan baru pada Tahap II (termasuk lokasi Sulsel).</li>
-        <li><strong>Kolaborasi:</strong> lintas-K/L (Kemensos, Kemendikdasmen, Kemenag, Kemenkeu).</li>
-      </ul>
-      <p class="muted">Sumber: <a href="https://sahabat.pu.go.id/eppid/berita/detail/terus-kebut-pembangunan-sekolah-rakyat-kementerian-pu-pastikan-progres-sesuai-target" target="_blank" rel="noopener">PUPR/Sahabat PU</a> · <a href="https://kemensos.go.id/berita-terkini/menteri-sosial/Presiden-Prabowo:-Sekolah-Rakyat-untuk-Memutus-Mata-Rantai-Kemiskinan" target="_blank" rel="noopener">Kemensos</a></p>
-    </article>
-
-    <article class="card program-card acc-phtc">
-      <span class="chip chip-phtc">PHTC Madrasah</span>
-      <h3>Revitalisasi Madrasah (PHTC)</h3>
-      <p>Program Hasil Terbaik Cepat (PHTC) untuk merevitalisasi madrasah seluruh Indonesia, sebagai pelaksanaan <strong>Inpres No. 7 Tahun 2025</strong> tentang percepatan pembangunan dan revitalisasi pendidikan PAUD, dasar, dan menengah.</p>
-      <ul>
-        <li><strong>Target:</strong> 2.120 madrasah di 33 provinsi (Tahap 1: 179 madrasah di 5 provinsi mulai Okt 2024; Tahap 2: 1.941 madrasah di 37 provinsi mulai Jan 2025).</li>
-        <li><strong>Hasil verifikasi:</strong> 1.411 madrasah memenuhi kriteria — Kontrak Tahun Tunggal/<em>Single Year Contract</em> (556 madrasah, Jun–Des 2025) dan Kontrak Tahun Jamak/<em>Multi Years Contract</em> (855 madrasah, Okt 2025–Jul 2026).</li>
-        <li><strong>Peran PU:</strong> rehabilitasi &amp; renovasi gedung pembelajaran, asrama, kantin, MCK, sarana penunjang.</li>
-      </ul>
-      <p class="muted">Sumber: <a href="https://sahabat.pu.go.id/eppid/berita/detail/kementerian-pu-terus-kebut-program-hasil-terbaik-cepat-phtc-melalui-revitalisasi-madrasah" target="_blank" rel="noopener">Sahabat PU</a> · <a href="https://mix.co.id/corporate-social-initiative/program-hasil-terbaik-cepat-madrasah-fokus-pada-revitalisasi-1-411-madrasah-di-seluruh-indonesia/" target="_blank" rel="noopener">MIX Marcomm</a></p>
-    </article>
-
-    <article class="card program-card acc-sppg">
-      <span class="chip chip-sppg">SPPG (MBG)</span>
-      <h3>Satuan Pelayanan Pemenuhan Gizi</h3>
-      <p>SPPG adalah dapur gizi yang mendukung program <strong>Makan Bergizi Gratis (MBG)</strong> Presiden Prabowo. Pembangunan oleh PU berdasarkan MoU &amp; PKS dengan Badan Gizi Nasional (BGN), ditandatangani 5 Agustus 2025.</p>
-      <ul>
-        <li><strong>Target Nasional (BGN):</strong> 25.000 SPPG di kawasan aglomerasi + 6.000 SPPG di wilayah 3T (total ±31.000).</li>
-        <li><strong>Lingkup PU 2025:</strong> dukungan pembangunan dapur MBG, fokus wilayah 3T, mengacu desain prototipe Kepmen PU No. 628/KPTS/M/2025.</li>
-        <li><strong>Catatan:</strong> dukungan PU untuk SPPG hanya pada TA 2025 (sesuai MoU PU–BGN); selanjutnya dilanjutkan oleh BGN dan mitra.</li>
-      </ul>
-      <p class="muted">Sumber: <a href="https://voi.id/ekonomi/502393/kementerian-pu-dan-bgn-teken-mou-percepat-pembangunan-dapur-mbg" target="_blank" rel="noopener">VOI</a> · <a href="https://konstruksimedia.com/kementerian-pu-dan-bgn-teken-mou-pks-percepat-pembangunan-31-000-sppg-di-seluruh-indonesia/" target="_blank" rel="noopener">Konstruksimedia</a> · <a href="https://bgn.go.id/" target="_blank" rel="noopener">bgn.go.id</a></p>
-    </article>
-
-  </div>
-</section>
-
-<!-- ============== TAB 3: INFRASTRUKTUR ============== -->
-<section class="tab-panel" id="panel-infra">
-  <h2>Infrastruktur per Kabupaten / Kota</h2>
-  <p class="muted">Profil paket pekerjaan yang dikunjungi. Sumber: <em>Bahan Informasi Kunjungan Bappenas</em> (Satker Pelaksanaan Prasarana Strategis Sulsel, status 4 Mei 2026).</p>
-
-  <div class="subtabs" role="tablist">
-    <button class="subtab active" data-sub="mks">Kota Makassar</button>
-    <button class="subtab" data-sub="mrs">Kab. Maros</button>
-    <button class="subtab" data-sub="tkr">Kab. Takalar</button>
-  </div>
-
-  <!-- KOTA MAKASSAR -->
-  <div class="sub-panel active" id="sub-mks">
-    <article class="card project-card acc-sr">
-      <span class="chip chip-sr">Sekolah Rakyat</span>
-      <h3>Sekolah Rakyat Tahap 2 — Kota Makassar</h3>
-      <p><strong>Lokasi:</strong> Kec. Biringkanaya, Kota Makassar (GOR Sudiang)</p>
-      <div class="kv">
-        <div><dt>Nilai Kontrak</dt><dd>Rp 219.635.698.491,51</dd></div>
-        <div><dt>Penyedia Jasa</dt><dd>NINDYA – BPS, KSO</dd></div>
-        <div><dt>Manajemen Konstruksi</dt><dd>PT Elsadai Servo Cons – PT Pola Teknik Konsultan, KSO</dd></div>
-        <div><dt>Luas Lahan</dt><dd>7,6 Ha</dd></div>
-        <div><dt>Luas Bangunan</dt><dd>35.400 m²</dd></div>
-        <div><dt>Target Selesai</dt><dd>20 Juni 2026</dd></div>
-        <div><dt>Progres Fisik (M-25)</dt><dd>59,12% (rencana 66,45%)</dd></div>
+    <div class="container">
+      <div class="sec-title">
+        <div class="sec-kicker"><span class="sec-num">01</span>Sekilas</div>
+        <h2 class="sec-h2">Tiga hari menelusuri<br/>enam <span class="serif-italic">prasarana strategis</span>.</h2>
       </div>
-      <p><strong>Lingkup pembangunan:</strong> 3 zona — Zona 1 (gedung SD/SMP/SMA, masjid, lapangan upacara, gedung serbaguna, gardu PLN, rumah pompa &amp; genset, gerbang, kolam retensi); Zona 2 (rusun guru, guest house, dapur, lapangan mini soccer, basket/voli, bangunan pelimpah); Zona 3 (asrama putra/putri SD/SMP/SMA, kantin SD/SMP/SMA, TPS).</p>
-    </article>
+      <p class="lede">
+        Kunjungan ini menelusuri progres pembangunan Sekolah Rakyat, Stadion Sudiang,
+        Revitalisasi Madrasah (PHTC), dan Satuan Pelayanan Pemenuhan Gizi (SPPG)
+        di tiga kabupaten/kota Sulawesi Selatan.
+      </p>
 
-    <article class="card project-card acc-stadion">
-      <span class="chip chip-stadion">Stadion</span>
-      <h3>Stadion Sudiang — Kota Makassar</h3>
-      <p><strong>Lokasi:</strong> Kawasan Olahraga Sudiang, Jl. Pajjaiang No. 73, Pai, Biringkanaya, Kota Makassar</p>
-      <div class="kv">
-        <div><dt>Nilai Kontrak</dt><dd>Rp 637.155.613.000 (inc PPN)</dd></div>
-        <div><dt>Sumber Dana</dt><dd>APBN TA 2025–2027</dd></div>
-        <div><dt>Kontraktor</dt><dd>WASKITA – ADHI, KSO</dd></div>
-        <div><dt>Konsultan Pengawas</dt><dd>PT Kogas Driyap Konsultan KSO PT Agrinas Pangan Nusantara (Persero) Wilayah II Makassar &amp; PT Marina Widya Karsa</dd></div>
-        <div><dt>Mulai – Selesai</dt><dd>30 Des 2025 – 22 Jun 2027</dd></div>
-        <div><dt>Progres Fisik (M-18)</dt><dd>8,506% (rencana 8,164%, deviasi +0,342%)</dd></div>
-        <div><dt>Progres Keuangan</dt><dd>15,00%</dd></div>
-      </div>
-      <p><strong>Spesifikasi:</strong> stadion sepak bola 5 lantai fungsional + tribun; kapasitas <strong>27.112 seat</strong>; luas lahan 66.161 m²; luas total lantai 35.839 m²; FoP 9.000 m² (rumput Zoysia matrella, penerangan 1.500 lux Grade FIFA B); rangka atap space frame metal zincalume standing seam; LED scoring board ≥ 70 m²; tata suara ≤ 115 dB; tersedia ruang VAR &amp; CCTV.</p>
-      <p><strong>Lingkup:</strong> persiapan, SMKK, struktur, arsitektur, MEP, interior, lapangan sepakbola, lanskap, infrastruktur, signage, special lighting, persampahan, grease trap/IPAL/sumpit, penyambungan utilitas.</p>
-    </article>
+      <div class="day-list" id="day-list"></div>
 
-    <article class="card project-card acc-phtc">
-      <span class="chip chip-phtc">PHTC Madrasah</span>
-      <h3>PHTC Sulsel 1 — MIS &amp; MAS Ulul Albab</h3>
-      <p><strong>Lokasi:</strong> Jl. Dg. Ramang, Sudiang Raya, Kec. Biringkanaya, Kota Makassar</p>
-      <div class="kv">
-        <div><dt>Paket</dt><dd>Rehabilitasi &amp; Renovasi Madrasah PHTC Sulsel 1 (Kota Makassar, Kab. Gowa, Kab. Pangkep)</dd></div>
-        <div><dt>Nilai Kontrak</dt><dd>Rp 16.337.141.000</dd></div>
-        <div><dt>Sumber Dana</dt><dd>APBN TA 2025</dd></div>
-        <div><dt>Kontraktor</dt><dd>PT Era Bangun Sarana</dd></div>
-        <div><dt>Konsultan MK</dt><dd>PT Darmasraya Mitra Amerta</dd></div>
-        <div><dt>Mulai – Selesai</dt><dd>29 Agu 2025 – 31 Des 2025</dd></div>
-        <div><dt>Progres</dt><dd>Fisik 100% · Keuangan 100%</dd></div>
+      <div class="sec-title">
+        <div class="sec-kicker"><span class="sec-num">02</span>Sorotan</div>
+        <h2 class="sec-h2">Enam <span class="serif-italic">lokasi</span> kunjungan.</h2>
       </div>
-      <p><strong>Cakupan paket Sulsel 1:</strong> MIS Ulul Albab (Makassar), MAS Ulul Albab (Makassar), MIS Ma'arif Silanggayya (Gowa), MAS Muhammadiyah Limbung (Gowa), MAS Arrahman Arrahim (Gowa), MAS DDI Baru-Baru Tangnga (Pangkep), MAS Anrong Appaka (Pangkep).</p>
-    </article>
+
+      <div class="proyek-grid" id="proyek-grid"></div>
+
+      <div class="footer-note">
+        Disusun untuk peserta kunjungan lapangan Bappenas.<br/>
+        Sumber: Satker Pelaksanaan Prasarana Strategis Sulsel.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== AGENDA ============== -->
+  <section class="screen" id="screen-agenda">
+    <div class="page-head">
+      <div class="page-eyebrow">Agenda kunjungan</div>
+      <h1 class="page-title">Rundown<br/><span class="serif-italic acc-gold">acara</span></h1>
+      <div class="page-sub">Waktu lokal WITA · Sumber rundown panitia (10 Mei 2026)</div>
+      <button class="theme-btn theme-toggle" aria-label="Ganti tema"></button>
+    </div>
+
+    <div class="day-tabs" id="day-tabs"></div>
+
+    <div class="container">
+      <div class="day-head">
+        <div class="day-head-date" id="day-head-date"></div>
+        <div class="day-head-line"></div>
+      </div>
+      <ol class="timeline" id="timeline"></ol>
+    </div>
+  </section>
+
+  <!-- ============== PROYEK ============== -->
+  <section class="screen" id="screen-proyek">
+    <div class="page-head">
+      <div class="page-eyebrow">Profil paket pekerjaan</div>
+      <h1 class="page-title"><span class="serif-italic">Enam</span><br/>proyek<span class="acc-gold">.</span></h1>
+      <div class="page-sub">Sumber: Bahan Informasi Kunjungan Bappenas (status 4 Mei 2026)</div>
+      <button class="theme-btn theme-toggle" aria-label="Ganti tema"></button>
+    </div>
+
+    <div class="filter-row" id="filter-row"></div>
+
+    <div class="container" id="proyek-list"></div>
+  </section>
+
+  <!-- ============== INFO ============== -->
+  <section class="screen" id="screen-info">
+    <div class="page-head">
+      <div class="page-eyebrow">Informasi</div>
+      <h1 class="page-title">Peta &amp;<br/><span class="serif-italic">konteks</span></h1>
+      <button class="theme-btn theme-toggle" aria-label="Ganti tema"></button>
+    </div>
+
+    <div class="info-tabs" id="info-tabs"></div>
+
+    <div class="container">
+      <div id="info-content"></div>
+    </div>
+  </section>
+
+  <!-- ============== BOTTOM TAB BAR ============== -->
+  <nav class="tabbar" id="tabbar"></nav>
+
+  <!-- ============== PROYEK DETAIL DRAWER ============== -->
+  <div class="detail-drawer" id="drawer" aria-hidden="true">
+    <div id="drawer-inner"></div>
   </div>
 
-  <!-- KAB MAROS -->
-  <div class="sub-panel" id="sub-mrs">
-    <article class="card project-card acc-phtc">
-      <span class="chip chip-phtc">PHTC Madrasah</span>
-      <h3>PHTC Sulsel 2 — MTsS Darul Muttaqin</h3>
-      <p><strong>Lokasi:</strong> Jl. Garuda Maccopa, Maccini Baji, Kec. Lau, Kab. Maros</p>
-      <div class="kv">
-        <div><dt>Paket</dt><dd>Rehabilitasi &amp; Renovasi Madrasah PHTC Sulsel 2 (Kab. Maros, Kab. Sinjai, Kab. Bone)</dd></div>
-        <div><dt>Nilai Kontrak</dt><dd>Rp 14.022.527.000</dd></div>
-        <div><dt>Sumber Dana</dt><dd>APBN TA 2025</dd></div>
-        <div><dt>Kontraktor</dt><dd>PT Arus Jaya</dd></div>
-        <div><dt>Konsultan MK</dt><dd>PT Mekaro Daya Mandiri KSO PT Alocita Mandiri</dd></div>
-        <div><dt>Mulai – Selesai</dt><dd>29 Agu 2025 – 31 Des 2025</dd></div>
-        <div><dt>Progres</dt><dd>Fisik 100% · Keuangan 100%</dd></div>
-      </div>
-      <p><strong>Lingkup di MTsS Darul Muttaqin:</strong> Gedung A (Kantor), Gedung B (Asrama Putra), Gedung C (Kantin), Gedung D &amp; E (Toilet), serta fasilitas penunjang.</p>
-      <p><strong>Cakupan paket Sulsel 2:</strong> MTsS Darul Muttaqin (Maros), MIS Amir Al-Jannah Tippulue (Bone), MTsS Pattuku (Bone), MTsS Al-Faaizun (Bone), MAN 4 Bone, RA Perwanida Tokka (Sinjai), MTsS Nurul Abyad Barang (Sinjai).</p>
-    </article>
-  </div>
+</div>
 
-  <!-- KAB TAKALAR -->
-  <div class="sub-panel" id="sub-tkr">
-    <article class="card project-card acc-sr">
-      <span class="chip chip-sr">Sekolah Rakyat</span>
-      <h3>Sekolah Rakyat Tahap 2 — Kab. Takalar</h3>
-      <p><strong>Lokasi:</strong> Desa Pa'rappunganta, Kec. Polombangkeng Utara, Kab. Takalar</p>
-      <div class="kv">
-        <div><dt>Penyedia Jasa</dt><dd>NINDYA – BPS, KSO</dd></div>
-        <div><dt>Manajemen Konstruksi</dt><dd>PT Elsadai Servo Cons – PT Pola Teknik Konsultan, KSO</dd></div>
-        <div><dt>Luas Lahan</dt><dd>5,6 Ha</dd></div>
-        <div><dt>Luas Bangunan</dt><dd>35.400 m²</dd></div>
-        <div><dt>Target Selesai</dt><dd>20 Juni 2026</dd></div>
-        <div><dt>Progres Fisik (M-25)</dt><dd>59,08% (rencana 73,14%, deviasi −8,92%)</dd></div>
-      </div>
-      <p><strong>Lingkup pembangunan:</strong> 3 zona — Zona 1 (gedung SMA/SMP, asrama putra/putri SMP &amp; SMA, kantin, rusun guru 2, dapur &amp; gudang, rumah ibadah, rumah pompa, rumah genset); Zona 2 (gedung SD, asrama putra/putri SD 1 &amp; 2, kantin SD); Zona 3 (gedung serbaguna, masjid, rusun guru 1, guest house, infrastruktur, furniture, PLN, lapangan mini soccer, basket/voli, pos keamanan &amp; gapura, pagar keliling, kolam retensi).</p>
-    </article>
-
-    <article class="card project-card acc-sppg">
-      <span class="chip chip-sppg">SPPG</span>
-      <h3>SPPG Takalar</h3>
-      <p><strong>Lokasi:</strong> Biringbalang, Bajeng, Kec. Polombangkeng Utara (titik pekerjaan: Kel. Bajeng, Kec. Pattalassang), Kab. Takalar</p>
-      <div class="kv">
-        <div><dt>Tipe Dapur</dt><dd>20 × 20</dd></div>
-        <div><dt>Luas Bangunan</dt><dd>400 m²</dd></div>
-        <div><dt>Progres</dt><dd>Rencana 100% · Realisasi 100% · Deviasi 0%</dd></div>
-      </div>
-      <p><strong>Komponen ruang:</strong> Tampak Depan, Area Pemorsian, Ruang Penyiapan Bahan, Area Distribusi, Gudang Basah, Ruang Masak.</p>
-    </article>
-  </div>
-
-</section>
-
-<!-- ============== TAB 4: KONTAK ============== -->
-<section class="tab-panel" id="panel-kontak">
-  <h2>Kontak PIC</h2>
-  <p class="muted">Hubungi PIC berikut untuk informasi logistik dan teknis selama kunjungan.</p>
-
-  <div class="cards">
-    <article class="card contact-card">
-      <div class="avatar">R</div>
-      <h3>Rafli</h3>
-      <p class="muted">PIC Kunjungan Lapangan</p>
-      <a class="btn btn-wa" href="https://wa.me/6281242424316" target="_blank" rel="noopener">
-        WhatsApp · +62 812-4242-4316
-      </a>
-    </article>
-
-    <article class="card contact-card">
-      <div class="avatar">H</div>
-      <h3>Hazim</h3>
-      <p class="muted">PIC Kunjungan Lapangan</p>
-      <a class="btn btn-wa" href="https://wa.me/6285890352487" target="_blank" rel="noopener">
-        WhatsApp · +62 858-9035-2487
-      </a>
-    </article>
-  </div>
-</section>
-
-</main>
-
-<footer class="foot">
-  <div class="wrap">
-    <p>Buku Saku · Monev Prasarana Strategis Sulawesi Selatan · 11 – 13 Mei 2026</p>
-    <p class="muted">Disusun untuk peserta kunjungan lapangan Bappenas. Sumber data: Satker Pelaksanaan Prasarana Strategis Sulsel.</p>
-  </div>
-</footer>
-
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
