@@ -6,7 +6,7 @@ const LOCATIONS = [
     alamat:'GOR Sudiang, Kel. Sudiang, Kec. Biringkanaya, Kota Makassar',
     koord:'5°06\'18"S 119°31\'41"E', lat:-5.105, lng:119.5281,
     gmaps:'https://maps.app.goo.gl/eTJrzjBFGmghBjK96',
-    day:'Day 1 · 10.00–12.30 WITA'
+    day:'Hari ke-1 · 10.00–12.30 WITA'
   },
   {
     n:2, paket:'Stadion Sudiang', tag:'stadion', tagLabel:'Stadion',
@@ -14,7 +14,7 @@ const LOCATIONS = [
     alamat:'Jl. Pajjaiang, Kel. Sudiang Raya, Kec. Biringkanaya, Kota Makassar',
     koord:'5°06\'35.40"S 119°31\'46.58"E', lat:-5.10983, lng:119.52960,
     gmaps:'https://maps.app.goo.gl/Ypr2LfL1HSkw32fs5',
-    day:'Day 1 · 10.00–12.30 WITA'
+    day:'Hari ke-1 · 10.00–12.30 WITA'
   },
   {
     n:3, paket:'PHTC Sulsel 2 — MTsS Darul Muttaqin', tag:'phtc', tagLabel:'PHTC Madrasah',
@@ -22,7 +22,7 @@ const LOCATIONS = [
     alamat:'Jl. Garuda Maccopa, Maccini Baji, Kec. Lau, Kab. Maros',
     koord:'5°02\'29.14"S 119°34\'26.96"E', lat:-5.04143, lng:119.57415,
     gmaps:'https://maps.app.goo.gl/cRpKG4iGDQ4mvAhN7',
-    day:'Day 1 · 14.30–16.00 WITA'
+    day:'Hari ke-1 · 14.30–16.00 WITA'
   },
   {
     n:4, paket:'Sekolah Rakyat Tahap 2 — Kab. Takalar', tag:'sr', tagLabel:'Sekolah Rakyat',
@@ -30,7 +30,7 @@ const LOCATIONS = [
     alamat:'Desa Pa\'rappunganta, Kec. Polombangkeng Utara, Kab. Takalar',
     koord:'5°21\'16"S 119°28\'17"E', lat:-5.3544, lng:119.4714,
     gmaps:'https://maps.app.goo.gl/ZxpUhP6VNbecbjn4A',
-    day:'Day 2 · 10.00–12.00 WITA'
+    day:'Hari ke-2 · 10.00–12.00 WITA'
   },
   {
     n:5, paket:'SPPG Takalar', tag:'sppg', tagLabel:'SPPG',
@@ -38,7 +38,7 @@ const LOCATIONS = [
     alamat:'Biringbalang, Bajeng, Kec. Polombangkeng Utara, Kab. Takalar (titik pekerjaan: Kel. Bajeng, Kec. Pattalassang)',
     koord:'5°24\'00.27"S 119°26\'53.22"E', lat:-5.40008, lng:119.44812,
     gmaps:'https://maps.app.goo.gl/KNqZU15LPFPNYZoEA',
-    day:'Day 2 · 14.00–15.30 WITA'
+    day:'Hari ke-2 · 14.00–15.30 WITA'
   },
   {
     n:6, paket:'PHTC Sulsel 1 — MIS & MAS Ulul Albab', tag:'phtc', tagLabel:'PHTC Madrasah',
@@ -46,7 +46,7 @@ const LOCATIONS = [
     alamat:'Jl. Dg. Ramang, Sudiang Raya, Kec. Biringkanaya, Kota Makassar',
     koord:'5°05\'55.31"S 119°31\'20.96"E', lat:-5.09870, lng:119.52249,
     gmaps:'https://maps.app.goo.gl/aZtazCmwo9WRrEbs6',
-    day:'Day 3 · 09.00–10.30 WITA'
+    day:'Hari ke-3 · 09.00–10.30 WITA'
   }
 ];
 
