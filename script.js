@@ -74,6 +74,12 @@ const PROYEK = [
     ],
     lingkup:"3 zona — Zona 1 (gedung SD/SMP/SMA, masjid, lapangan upacara, gedung serbaguna, gardu PLN, rumah pompa & genset, gerbang, kolam retensi); Zona 2 (rusun guru, guest house, dapur, lapangan mini soccer, basket/voli, bangunan pelimpah); Zona 3 (asrama putra/putri SD/SMP/SMA, kantin SD/SMP/SMA, TPS).",
     ringkasan:"Sekolah gratis berkualitas untuk anak dari keluarga miskin. Bagian dari 100 SR/tahun nasional.",
+    foto:[
+      { src:"assets/proyek/sr-makassar/01.jpg", cap:"Overview kawasan SR Makassar" },
+      { src:"assets/proyek/sr-makassar/02.jpg", cap:"Dokumentasi masa bangunan — Zona 1" },
+      { src:"assets/proyek/sr-makassar/03.jpg", cap:"Dokumentasi masa bangunan — Zona 2" },
+      { src:"assets/proyek/sr-makassar/04.jpg", cap:"Dokumentasi masa bangunan — Zona 3" },
+    ],
   },
   { id:"stadion", kategori:"STD", kategoriLabel:"Stadion", emoji:"🏟️",
     nama:"Stadion Sudiang", kota:"Kota Makassar",
@@ -92,6 +98,12 @@ const PROYEK = [
     lingkup:"Stadion sepak bola 5 lantai + tribun. Kapasitas 27.112 seat; lahan 66.161 m²; total lantai 35.839 m². FoP 9.000 m² (rumput Zoysia matrella, penerangan 1.500 lux Grade FIFA B). Atap space frame metal zincalume standing seam. LED scoring board ≥ 70 m². Tata suara ≤ 115 dB. Ruang VAR & CCTV.",
     ringkasan:"Venue olahraga skala internasional standar FIFA B, kapasitas 27 ribu kursi.",
     spesial:[ ["27.112","Kapasitas Kursi"], ["9.000 m²","Field of Play"], ["1.500 lux","FIFA Grade B"], ["≥ 70 m²","LED Scoring"] ],
+    foto:[
+      { src:"assets/proyek/stadion/01.jpg", cap:"Gambar 3D perencanaan" },
+      { src:"assets/proyek/stadion/02.jpg", cap:"Gambar 3D perencanaan" },
+      { src:"assets/proyek/stadion/03.jpg", cap:"Pemasangan PC Strand Ground Anchor" },
+      { src:"assets/proyek/stadion/04.jpg", cap:"Dokumentasi pekerjaan kawasan" },
+    ],
   },
   { id:"phtc-maros", kategori:"PHTC", kategoriLabel:"PHTC Madrasah", emoji:"🕌",
     nama:"MTsS Darul Muttaqin — PHTC Sulsel 2", kota:"Kab. Maros",
@@ -110,6 +122,12 @@ const PROYEK = [
     lingkup:"Lingkup di MTsS Darul Muttaqin: Gedung A (Kantor), B (Asrama Putra), C (Kantin), D & E (Toilet), serta fasilitas penunjang.",
     ringkasan:"Rehabilitasi & renovasi madrasah — bagian dari Inpres 7/2025 percepatan revitalisasi pendidikan.",
     cakupan:["MTsS Darul Muttaqin (Maros)","MIS Amir Al-Jannah Tippulue (Bone)","MTsS Pattuku (Bone)","MTsS Al-Faaizun (Bone)","MAN 4 Bone","RA Perwanida Tokka (Sinjai)","MTsS Nurul Abyad Barang (Sinjai)"],
+    foto:[
+      { src:"assets/proyek/phtc-maros/01.jpg", cap:"Fasilitas penunjang MTsS Darul Muttaqin" },
+      { src:"assets/proyek/phtc-maros/02.jpg", cap:"Fasilitas penunjang MTsS Darul Muttaqin" },
+      { src:"assets/proyek/phtc-maros/03.jpg", cap:"Fasilitas penunjang MTsS Darul Muttaqin" },
+      { src:"assets/proyek/phtc-maros/04.jpg", cap:"Fasilitas penunjang MTsS Darul Muttaqin" },
+    ],
   },
   { id:"sr-takalar", kategori:"SR", kategoriLabel:"Sekolah Rakyat", emoji:"🏫",
     nama:"Sekolah Rakyat Tahap 2", kota:"Kab. Takalar",
@@ -127,6 +145,12 @@ const PROYEK = [
     ],
     lingkup:"3 zona — Zona 1 (gedung SMA/SMP, asrama putra/putri SMP & SMA, kantin, rusun guru 2, dapur & gudang, rumah ibadah, pompa, genset); Zona 2 (gedung SD, asrama putra/putri SD 1 & 2, kantin SD); Zona 3 (gedung serbaguna, masjid, rusun guru 1, guest house, infrastruktur, furniture, PLN, lapangan mini soccer, basket/voli, pos keamanan & gapura, pagar keliling, kolam retensi).",
     ringkasan:"Lokasi SR kedua di Sulsel, kapasitas serupa Makassar.",
+    foto:[
+      { src:"assets/proyek/sr-takalar/01.jpg", cap:"Dokumentasi kawasan SR Takalar" },
+      { src:"assets/proyek/sr-takalar/02.jpg", cap:"Pekerjaan Zona 1" },
+      { src:"assets/proyek/sr-takalar/03.jpg", cap:"Pekerjaan Zona 2" },
+      { src:"assets/proyek/sr-takalar/04.jpg", cap:"Pekerjaan Zona 3" },
+    ],
   },
   { id:"sppg-takalar", kategori:"SPPG", kategoriLabel:"SPPG", emoji:"🍱",
     nama:"SPPG Takalar", kota:"Kab. Takalar",
@@ -137,6 +161,12 @@ const PROYEK = [
     facts:[ ["Tipe Dapur","20 × 20"], ["Luas Bangunan","400 m²"], ["Realisasi","100% (deviasi 0%)"] ],
     lingkup:"Komponen ruang: Tampak Depan, Area Pemorsian, Ruang Penyiapan Bahan, Area Distribusi, Gudang Basah, Ruang Masak.",
     ringkasan:"Dapur gizi pendukung program Makan Bergizi Gratis (MBG) Presiden.",
+    foto:[
+      { src:"assets/proyek/sppg-takalar/01.jpg", cap:"Tampak depan / Area Pemorsian" },
+      { src:"assets/proyek/sppg-takalar/02.jpg", cap:"Ruang Penyiapan Bahan" },
+      { src:"assets/proyek/sppg-takalar/03.jpg", cap:"Area Distribusi" },
+      { src:"assets/proyek/sppg-takalar/04.jpg", cap:"Gudang Basah / Ruang Masak" },
+    ],
   },
   { id:"phtc-makassar", kategori:"PHTC", kategoriLabel:"PHTC Madrasah", emoji:"🕌",
     nama:"MIS & MAS Ulul Albab — PHTC Sulsel 1", kota:"Kota Makassar",
@@ -155,6 +185,12 @@ const PROYEK = [
     lingkup:"Rehabilitasi & renovasi gedung pembelajaran, asrama, kantin, MCK, dan sarana penunjang.",
     ringkasan:"Bagian akhir kunjungan — paket PHTC pertama Sulsel, telah selesai 100%.",
     cakupan:["MIS Ulul Albab (Makassar)","MAS Ulul Albab (Makassar)","MIS Ma'arif Silanggayya (Gowa)","MAS Muhammadiyah Limbung (Gowa)","MAS Arrahman Arrahim (Gowa)","MAS DDI Baru-Baru Tangnga (Pangkep)","MAS Anrong Appaka (Pangkep)"],
+    foto:[
+      { src:"assets/proyek/phtc-makassar/01.jpg", cap:"MIS Ulul Albab — dokumentasi M18" },
+      { src:"assets/proyek/phtc-makassar/02.jpg", cap:"MIS Ulul Albab — dokumentasi M18" },
+      { src:"assets/proyek/phtc-makassar/03.jpg", cap:"MAS Ulul Albab — dokumentasi M18" },
+      { src:"assets/proyek/phtc-makassar/04.jpg", cap:"MAS Ulul Albab — dokumentasi M18" },
+    ],
   },
 ];
 
@@ -493,6 +529,17 @@ function openDrawer(id){
     <h3 class="detail-sub">Cakupan paket</h3>
     <ul class="bullet-list">${p.cakupan.map(c => `<li>${esc(c)}</li>`).join("")}</ul>` : "";
 
+  const fotoHtml = p.foto && p.foto.length ? `
+    <h3 class="detail-sub">Dokumentasi</h3>
+    <div class="gallery">
+      ${p.foto.map((f, i) => `
+        <button class="gal-item" data-pid="${p.id}" data-idx="${i}" aria-label="${esc(f.cap)}">
+          <img src="${esc(f.src)}" alt="${esc(f.cap)}" loading="lazy" />
+          <span class="gal-cap">${esc(f.cap)}</span>
+        </button>
+      `).join("")}
+    </div>` : "";
+
   $("#drawer-inner").innerHTML = `
     <div class="detail-hero tag-${p.kategori}">
       <button class="detail-back" id="drawer-close">${I.back}<span>Kembali</span></button>
@@ -532,6 +579,8 @@ function openDrawer(id){
       <h3 class="detail-sub">Lingkup pekerjaan</h3>
       <p class="detail-text">${esc(p.lingkup)}</p>
 
+      ${fotoHtml}
+
       ${cakupanHtml}
 
       <a class="maps-btn" href="${esc(p.gmaps)}" target="_blank" rel="noopener">
@@ -543,7 +592,52 @@ function openDrawer(id){
   $("#drawer").setAttribute("aria-hidden", "false");
   document.body.classList.add("drawer-open");
   $("#drawer-close").addEventListener("click", closeDrawer);
+  $$("#drawer .gal-item").forEach(b => b.addEventListener("click", () => {
+    openLightbox(p.foto, parseInt(b.dataset.idx, 10));
+  }));
   $("#drawer").scrollTop = 0;
+}
+
+// ---- Lightbox ----
+function openLightbox(photos, startIdx){
+  let idx = startIdx;
+  let lb = document.getElementById("lightbox");
+  if (!lb) {
+    lb = document.createElement("div");
+    lb.id = "lightbox";
+    lb.className = "lightbox";
+    lb.innerHTML = `
+      <button class="lb-close" aria-label="Tutup">×</button>
+      <button class="lb-prev" aria-label="Sebelumnya">‹</button>
+      <button class="lb-next" aria-label="Berikutnya">›</button>
+      <figure class="lb-fig">
+        <img class="lb-img" alt="" />
+        <figcaption class="lb-cap"></figcaption>
+      </figure>`;
+    document.body.appendChild(lb);
+  }
+  const imgEl = lb.querySelector(".lb-img");
+  const capEl = lb.querySelector(".lb-cap");
+  const show = () => {
+    imgEl.src = photos[idx].src;
+    imgEl.alt = photos[idx].cap;
+    capEl.textContent = `${idx + 1} / ${photos.length} · ${photos[idx].cap}`;
+  };
+  const close = () => { lb.classList.remove("open"); document.removeEventListener("keydown", onKey); };
+  const next = () => { idx = (idx + 1) % photos.length; show(); };
+  const prev = () => { idx = (idx - 1 + photos.length) % photos.length; show(); };
+  const onKey = (e) => {
+    if (e.key === "Escape") close();
+    else if (e.key === "ArrowRight") next();
+    else if (e.key === "ArrowLeft") prev();
+  };
+  lb.querySelector(".lb-close").onclick = close;
+  lb.querySelector(".lb-next").onclick = next;
+  lb.querySelector(".lb-prev").onclick = prev;
+  lb.onclick = (e) => { if (e.target === lb) close(); };
+  document.addEventListener("keydown", onKey);
+  show();
+  lb.classList.add("open");
 }
 function closeDrawer(){
   $("#drawer").classList.remove("open");
